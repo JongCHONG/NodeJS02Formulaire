@@ -13,8 +13,13 @@ app.get("/", (req, res) => {
   res.render('home')
 })
 
+app.get('/signup', (req, res) =>{
+  res.render('signup')
+})
+
 app.post('/form/signup', (req, res) => {
   console.log(req.body)
+  res.redirect('/signup')
 })
 
 app.listen(port, () => {
